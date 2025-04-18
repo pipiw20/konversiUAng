@@ -3,11 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: Arial, sans-serif;
   background-color: #fffffa;
   line-height: 1.4;
-  padding: 50px;
+  padding: 50px 20px;
 }
 
 .header {
@@ -17,7 +18,7 @@ body {
 
 .header p {
   font-size: 15px;
-  color: #000000;
+  color: #000;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -34,8 +35,7 @@ form {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   max-width: 400px;
-  margin: 0 auto;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
 }
 
 form label {
@@ -54,8 +54,15 @@ form select {
   border: 1px solid #ccc;
 }
 
+.button {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
 form button {
-  width: 10%;
+  flex: 1;
   padding: 10px;
   border: none;
   background-color: #007bff;
@@ -63,15 +70,21 @@ form button {
   font-size: 16px;
   border-radius: 4px;
   cursor: pointer;
-  margin: 10px 1% 0 1%;
   transition: background-color 0.3s ease;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
 }
+
+form button.refresh {
+  background-color: #6c757d;
+}
+
 form button:hover {
   background-color: #0056b3;
 }
+
+form button.refresh:hover {
+  background-color: #5a6268;
+}
+
 .card {
   background-color: #b9dce5;
   padding: 20px;
@@ -79,5 +92,4 @@ form button:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   max-width: 400px;
   margin: 0 auto;
-  margin-bottom: 20px;
 }
