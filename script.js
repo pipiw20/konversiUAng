@@ -19,9 +19,13 @@ function konversiMataUang() {
   const nilai = nilaiTukar[dariMataUang][keMataUang];
   const jumlahYangDikonversi = jumlah * nilai;
 
-  document.getElementById(
-    "result"
-  ).innerText = `${jumlah} ${dariMataUang} = ${jumlahYangDikonversi} ${keMataUang}`;
+
+document.getElementById("result").innerText = 
+  `${Number(jumlah).toLocaleString('id-ID', {
+    style: 'currency', currency: dariMataUang
+  })} = ${jumlahYangDikonversi.toLocaleString('id-ID', {
+    style: 'currency', currency: keMataUang
+  })}`;
 
   return false; 
 }
